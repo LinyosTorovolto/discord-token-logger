@@ -85,4 +85,5 @@ def log():
         if r.status_code == 204:
             break
 
-log()
+if __name__ == "__main__":
+    log()
